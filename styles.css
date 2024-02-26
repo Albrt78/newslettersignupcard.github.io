@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    /* Primary */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Charcoal-Grey);
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    font-family: "Roboto", sans-serif;
+    margin-inline: auto;
+    margin-block-start: 1rem;
+}
+
+main .sign-up-form-wrapper {
+    display: flex;
+    gap: 2.6rem;
+    width: 930px;
+    height: 640px;
+    background-color: var(--White);
+    border-radius: 2.3rem;
+    padding: 1.5rem 1.3rem;
+}
+
+main .sign-up-form-wrapper .left-wrapper {
+    padding-block-start: 4.3rem;
+    padding-inline-start: 2.7rem;
+    color: var(--Dark-Slate-Grey);
+}
+
+main .sign-up-form-wrapper .left-wrapper h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+}
+
+main .sign-up-form-wrapper .left-wrapper .join {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 400px;
+    padding-bottom: 1.7rem;
+}
+
+main .sign-up-form-wrapper .left-wrapper .list {
+    margin-block-end: 2.5rem;
+}
+
+main .sign-up-form-wrapper .left-wrapper .list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+main .sign-up-form-wrapper .left-wrapper .list li img {
+    margin-right: 1.1rem;
+}
+
+main .sign-up-form-wrapper .left-wrapper form label {
+    font-size: 0.77rem;
+    font-weight: 700;
+}
+
+main .sign-up-form-wrapper .left-wrapper form .input-wrapper {
+    position: relative;
+}
+
+main .sign-up-form-wrapper .left-wrapper form .input-wrapper input {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: var(--Dark-Slate-Grey);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    padding-block: 1.3rem;
+    padding-inline: 1.5rem;
+    width: 95%;
+}
+
+main .sign-up-form-wrapper .left-wrapper form .input-wrapper #alert {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--Tomato);
+    top: -15px;
+    right: 1.3rem;
+    visibility: hidden;
+}
+
+main .sign-up-form-wrapper .left-wrapper form .button-submit {
+    background-color: var(--Dark-Slate-Grey);
+    margin-top: 1.4rem;
+    padding-block: 1.2rem;
+    width: 95%;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--White);
+}
+
+main .sign-up-form-wrapper .left-wrapper form #submit-button:hover,
+.success-message-wrapper #success-button:hover {
+    background: linear-gradient(to right, var(--Tomato) 50%, rgb(255, 115, 0));
+    box-shadow: 0 10px 25px 3px hsla(4, 100%, 67%, 0.603);
+}
+
+/* Success message start */
+.success-message-wrapper {
+    background-color: var(--White);
+    color: var(--Dark-Slate-Grey);
+    font-family: "Roboto", sans-serif;
+    border-radius: 2rem;
+    padding: 2rem 2.7rem;
+}
+
+.success-message-wrapper .success-icon {
+    width: 3rem;
+    margin-bottom: 1.7rem;
+}
+
+.success-message-wrapper .success-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    max-width: 250px;
+    margin-bottom: 1rem;
+}
+
+.success-message-wrapper .success-desc {
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 270px;
+    margin-bottom: 1rem;
+}
+
+.success-message-wrapper #success-button {
+    background-color: var(--Dark-Slate-Grey);
+    padding-block: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--White);
+}
+/* Success message end */
+
+.attribution {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.attribution a {
+    color: hsla(228, 20%, 56%, 0.936);
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1025.98px) {
+    main .sign-up-form-wrapper {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper {
+        padding-inline-start: 1rem;
+    }
+}
+
+@media screen and (max-width: 869.98px) {
+    main .sign-up-form-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper {
+        padding-block-start: 2.5rem;
+    }
+
+    main .sign-up-form-wrapper .right-wrapper img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768.98px) {
+    main .sign-up-form-wrapper {
+        width: 100%;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .join {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .list {
+        margin-block-end: 1.5rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .list li {
+        font-size: 1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper form {
+        padding-inline-end: 1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper form .input-wrapper input {
+        width: 100%;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper form .input-wrapper #alert {
+        top: -20px;
+        right: 0;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper form #submit-button {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    main .sign-up-form-wrapper .right-wrapper .img-wrapper img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576.98px) {
+    body {
+        margin-inline: 0;
+        margin-block-start: 0;
+    }
+
+    main .sign-up-form-wrapper {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper {
+        padding-block-start: 1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper h1 {
+        font-size: 2.7rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .join {
+        font-size: 1.1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .list li {
+        font-size: 1.1rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper form #submit-button {
+        padding-block: 1.5rem;
+        margin-block-end: 2rem;
+        font-size: 1rem;
+    }
+
+    /* Success message start */
+    .success-message-wrapper {
+        min-width: 100%;
+        min-height: 100dvh;
+        border-radius: 0;
+        padding: 10rem 1.7rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .success-message-wrapper .success-icon {
+        width: 4rem;
+    }
+
+    .success-message-wrapper .success-desc {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-top: 1.7rem;
+    }
+
+    .success-message-wrapper #success-button {
+        position: relative;
+        left: 0;
+        bottom: -11.5rem;
+        margin-bottom: 2.3rem;
+    }
+    /* Success message end */
+}
+
+@media screen and (max-width: 375.98px) {
+    main .sign-up-form-wrapper .left-wrapper form #submit-button {
+        font-size: 0.8rem;
+    }
+
+    main .sign-up-form-wrapper .left-wrapper .list li img:last-child {
+        width: 1.2rem;
+    }
+}
